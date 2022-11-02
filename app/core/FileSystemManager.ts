@@ -6,7 +6,7 @@ import * as fs from 'fs';
 export class FileSystemManager implements FileSystemAdapter {
 
     saveFile(payload: PayloadFile): void {
-        const { filename, data } = payload;
+        const { filename, data } = payload;    
         fs.writeFileSync(filename, data);
     }
 }

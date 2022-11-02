@@ -10,7 +10,7 @@ export class AlertService {
             icon: icon,
             title: text,
             showConfirmButton: false,
-            timer: 1500
+            timer: 2000
           })
     }
 }

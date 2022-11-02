@@ -18,7 +18,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
             } catch (error: any) {
                 alertService.makeAlert("error", error.message)
                 .then((_)=>{
-                    inputFilename.value = "";
+                    inputFilename.value = ".txt";
                 });
             }
         }
