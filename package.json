@@ -25,7 +25,8 @@
     "webpack-node-externals": "^3.0.0"
   },
   "dependencies": {
-    "electron": "^21.2.0"
+    "electron": "^21.2.0",
+    "sweetalert2": "^11.6.5"
   },
   "browser": ""
 }

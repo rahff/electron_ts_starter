@@ -1,4 +1,5 @@
 import { writeInFile } from './core/writeInFile';
+import { alertService } from './services/AlertService';
 
 
 window.addEventListener('DOMContentLoaded', ()=>{
@@ -9,7 +10,17 @@ window.addEventListener('DOMContentLoaded', ()=>{
         const textValue = inputText?.value;
         const filename = inputFilename?.value;
         if(textValue && filename){
-            writeInFile({filename, data: textValue});
+            try {
+                writeInFile({filename, data: textValue});
+                alertService.makeAlert("success", `You have create ${filename}`);
+                inputFilename.value = "";
+                inputText.value = "";
+            } catch (error: any) {
+                alertService.makeAlert("error", error.message)
+                .then((_)=>{
+                    inputFilename.value = "";
+                });
+            }
         }
     })
 })
