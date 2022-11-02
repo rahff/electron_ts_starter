@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+      "module": "NodeNext",
+      "noImplicitAny": true,
+      "sourceMap": true,
+      "target": "ESNext",
+      "rootDir": "./",
+      "moduleResolution": "Node",
+      "outDir": "./dist",
+      "baseUrl": ".",
+      "paths": {
+        "*": ["node_modules/*"],
+        "app":["app/src"]
+      }
+    },
+    "include": [
+      "app/**/*",
+      "shaded/**/*"
+    ]
+  }
