@@ -13,7 +13,3 @@ window.addEventListener('DOMContentLoaded', ()=>{
         }
     })
 })
-
-setTimeout(() => {
-    
-}, 2000); 
