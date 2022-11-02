@@ -1,7 +1,4 @@
-import { ElectronApi } from "../../shared/ElectronApi";
 import { writeInFile } from './core/writeInFile';
-
-declare const electronApi: ElectronApi
 
 
 window.addEventListener('DOMContentLoaded', ()=>{
@@ -11,8 +8,6 @@ window.addEventListener('DOMContentLoaded', ()=>{
     button?.addEventListener('click', ()=> {
         const textValue = inputText?.value;
         const filename = inputFilename?.value;
-        console.log("values", filename, textValue);
-        
         if(textValue && filename){
             writeInFile({filename, data: textValue});
         }
